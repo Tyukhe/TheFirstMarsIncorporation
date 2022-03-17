@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% for job in jobs %}
+    <h2>Action #{{loop.index}}</h2>
+  <table>
+   <tr><th>Работа</th><th>Лидер</th><th>Продолжительность</th><th>Команда</th><th>Состояние</th></tr>
+   <tr><td>{{job.job}}</td><td>{{job.team_leader}}</td><td>{{job.work_size}}</td><td>{{job.collaborators}}</td><td>{{job.is_finished}}</tr>
+  </table>
+{% endfor %}
+{% endblock %}
